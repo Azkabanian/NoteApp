@@ -60,4 +60,7 @@ dependencies {
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4:${AppConfig.composeUiVersion}")
     debugImplementation ("androidx.compose.ui:ui-tooling:${AppConfig.composeUiVersion}")
     debugImplementation ("androidx.compose.ui:ui-test-manifest:${AppConfig.composeUiVersion}")
+
+    implementation(Dependencies.roomRuntime)
+    implementation(Dependencies.roomCompiler)
 }

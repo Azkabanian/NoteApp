@@ -1,6 +1,7 @@
 plugins {
-    id ("com.android.application")
-    id ("org.jetbrains.kotlin.android")
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
 }
 
 android {
@@ -23,7 +24,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -48,19 +52,21 @@ android {
 
 dependencies {
 
-    implementation (Dependencies.core)
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation ("androidx.activity:activity-compose:1.3.1")
-    implementation ("androidx.compose.ui:ui:${AppConfig.composeUiVersion}")
-    implementation ("androidx.compose.ui:ui-tooling-preview:${AppConfig.composeUiVersion}")
-    implementation ("androidx.compose.material:material:1.1.1")
-    testImplementation ("junit:junit:4.13.2")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.0")
-    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:${AppConfig.composeUiVersion}")
-    debugImplementation ("androidx.compose.ui:ui-tooling:${AppConfig.composeUiVersion}")
-    debugImplementation ("androidx.compose.ui:ui-test-manifest:${AppConfig.composeUiVersion}")
+    implementation(Dependencies.core)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.compose.ui:ui:${AppConfig.composeUiVersion}")
+    implementation("androidx.compose.ui:ui-tooling-preview:${AppConfig.composeUiVersion}")
+    implementation("androidx.compose.material:material:1.3.1")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${AppConfig.composeUiVersion}")
+    debugImplementation("androidx.compose.ui:ui-tooling:${AppConfig.composeUiVersion}")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:${AppConfig.composeUiVersion}")
 
     implementation(Dependencies.roomRuntime)
-    implementation(Dependencies.roomCompiler)
+    "kapt"(Dependencies.roomCompiler)
+    implementation(Dependencies.roomKtx)
+    implementation(Dependencies.koinOfAndroid)
 }

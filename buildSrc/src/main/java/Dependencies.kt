@@ -19,6 +19,7 @@ object Dependencies {
     // Room
     const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
 
     // Kotlin Extensions and Coroutines support for Room
     const val kotlinExtensionAndCoroutinesSupportForRoom = "androidx.room:room-ktx:${Versions.roomVersion}"
@@ -30,20 +31,6 @@ object Dependencies {
     const val koinOfAndroid = "io.insert-koin:koin-android:${Versions.koinVersionOfAndroid}"
     const val koinOfCoreJvm = "io.insert-koin:koin-core-jvm:${Versions.koinVersionOfCoreJvm}"
 
-    //Retrofit
-    const val retrofit2 = "com.squareup.retrofit2:retrofit:${Versions.retrofit2Version}"
-    const val retrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit2Version}"
-
-    //okhttp
-    const val okhttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhttp3Version}"
-    const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3Version}"
-
     //Picasso
     const val picasso = "com.squareup.picasso:picasso:${Versions.picassoVersion}"
-
-    //SnapTimePicker
-    const val snapTimePicker = "com.akexorcist:snap-time-picker:${Versions.snapTimePickerVersion}"
-
-    //Country picker
-    const val countryPicker = "com.hbb20:android-country-picker:${Versions.countryPickerVersion}"
 }

@@ -19,5 +19,5 @@ val koinAppModule = module {
     }
     factory { (get() as NoteDatabase).noteDao }
     single<NoteRepository> { NoteRepositoryImpl(dao = get()) }
-    factory { NoteUseCases(getNotesUseCase = get(), deleteNoteUseCase = get()) }
+    factory { NoteUseCases(getNotesUseCase = get(), deleteNoteUseCase = get(), addNote = get()) }
 }
